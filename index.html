@@ -128,212 +128,421 @@
     </header>
 
     <!--SECTION-->
-    <section class="grid grid-cols-6 gap-0">
-      <h1 class="text-center col-span-6 text-5xl font-serif mt-2">
+    <section x-data="{tab: 'osa'}">
+      <h1 class="text-center col-span-6 text-5xl font-serif my-2">
         My Trip To Japan
       </h1>
-      <div
-        class="max-w-xs rounded overflow-hidden shadow-lg my-2 col-span-6 md:col-span-2 mx-auto bg-teal-600"
-      >
-        <img
-          class="w-full"
-          src="./images/umeda-view-osaka.JPG"
-          alt="Sunset in the mountains"
-        />
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2 text-white">
-            Inside The Umeda Sky Building
+      <div class="col-span-6 text-center">
+        <button
+          :class="{ 'active': tab === 'osa' }"
+          class="btn-teal mt-2 col-span-2"
+          @click="tab = 'osa'"
+        >
+          Osaka
+        </button>
+        <button
+          :class="{ 'active': tab === 'tok' }"
+          class="btn-teal mt-2 col-span-2"
+          @click="tab = 'tok'"
+        >
+          Tokyo
+        </button>
+        <button
+          :class="{ 'active': tab === 'kyo' }"
+          class="btn-teal mt-2 col-span-2"
+          @click="tab = 'kyo'"
+        >
+          Kyoto
+        </button>
+        <button
+          :class="{ 'active': tab === 'shi' }"
+          class="btn-teal mt-2 col-span-2"
+          @click="tab = 'shi'"
+        >
+          Shigi Mount
+        </button>
+      </div>
+      <!--OSAKA TAB-->
+      <div x-show="tab === 'osa'" class="grid grid-cols-6 gap-0">
+        <div
+          class="max-w-xs rounded-xl overflow-hidden shadow-lg my-2 col-span-6 md:col-span-2 mx-auto bg-teal-600"
+        >
+          <img
+            class="w-full"
+            src="./images/umeda-view-osaka.JPG"
+            alt="Sunset in the mountains"
+          />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2 text-white">
+              Inside The Umeda Sky Building
+            </div>
+            <p class="text-grey-darker text-base">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptatibus quia, nulla! Maiores et perferendis eaque,
+              exercitationem praesentium nihil.
+            </p>
           </div>
-          <p class="text-grey-darker text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
-          </p>
+          <div class="px-6 py-4">
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#travel</span
+            >
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#spring</span
+            ><span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#japan</span
+            >
+          </div>
         </div>
-        <div class="px-6 py-4">
-          <span class="inline-block px-3 py-1 text-sm font-semibold text-white"
-            >#travel</span
-          >
-          <span class="inline-block px-3 py-1 text-sm font-semibold text-white"
-            >#spring</span
-          ><span class="inline-block px-3 py-1 text-sm font-semibold text-white"
-            >#japan</span
-          >
+        <div
+          class="max-w-xs rounded-xl overflow-hidden shadow-lg my-2 col-span-6 md:col-span-2 mx-auto bg-teal-600"
+        >
+          <img
+            class="w-full"
+            src="./images/monkey-osaka.JPG"
+            alt="Sunset in the mountains"
+          />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2 text-white">Monkeys Statues</div>
+            <p class="text-grey-darker text-base">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptatibus quia, nulla! Maiores et perferendis eaque,
+              exercitationem praesentium nihil.
+            </p>
+          </div>
+          <div class="px-6 py-4">
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#travel</span
+            >
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#spring</span
+            ><span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#japan</span
+            >
+          </div>
+        </div>
+        <div
+          class="max-w-xs rounded-xl overflow-hidden shadow-lg my-2 col-span-6 md:col-span-2 mx-auto bg-teal-600"
+        >
+          <img
+            class="w-full"
+            src="./images/temple-lion-osaka.JPG"
+            alt="Sunset in the mountains"
+          />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2 text-white">Osaka's Temple</div>
+            <p class="text-grey-darker text-base">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptatibus quia, nulla! Maiores et perferendis eaque,
+              exercitationem praesentium nihil.
+            </p>
+          </div>
+          <div class="px-6 py-4">
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#travel</span
+            >
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#spring</span
+            ><span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#japan</span
+            >
+          </div>
         </div>
       </div>
-      <div
-        class="max-w-xs rounded overflow-hidden shadow-lg my-2 col-span-6 md:col-span-2 mx-auto bg-teal-600"
-      >
-        <img
-          class="w-full"
-          src="./images/temple-lion-osaka.JPG"
-          alt="Sunset in the mountains"
-        />
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">Osaka's Temples</div>
-          <p class="text-grey-darker text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
-          </p>
+
+      <!--TOKYO TAB-->
+      <div x-show="tab === 'tok'" class="grid grid-cols-6 gap-0">
+        <div
+          class="max-w-xs rounded-xl overflow-hidden shadow-lg my-2 col-span-6 md:col-span-2 mx-auto bg-teal-600"
+        >
+          <img
+            class="w-full"
+            src="./images/liberty-tokyo.JPG"
+            alt="Sunset in the mountain"
+          />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2 text-white">Liberty</div>
+            <p class="text-grey-darker text-base">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptatibus quia, nulla! Maiores et perferendis eaque,
+              exercitationem praesentium nihil.
+            </p>
+          </div>
+          <div class="px-6 py-4">
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#travel</span
+            >
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#spring</span
+            ><span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#japan</span
+            >
+          </div>
         </div>
-        <div class="px-6 py-4">
-          <span
-            class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2"
-            >#photography</span
-          >
-          <span
-            class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2"
-            >#travel</span
-          >
-          <span
-            class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker"
-            >#spring</span
-          ><span
-            class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker"
-            >#japan</span
-          >
+        <div
+          class="max-w-xs rounded-xl overflow-hidden shadow-lg my-2 col-span-6 md:col-span-2 mx-auto bg-teal-600"
+        >
+          <img
+            class="w-full"
+            src="./images/akiba-tokyo.JPG"
+            alt="Sunset in the mountains"
+          />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2 text-white">Akihabara</div>
+            <p class="text-grey-darker text-base">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptatibus quia, nulla! Maiores et perferendis eaque,
+              exercitationem praesentium nihil.
+            </p>
+          </div>
+          <div class="px-6 py-4">
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#travel</span
+            >
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#spring</span
+            ><span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#japan</span
+            >
+          </div>
+        </div>
+        <div
+          class="max-w-xs rounded-xl overflow-hidden shadow-lg my-2 col-span-6 md:col-span-2 mx-auto bg-teal-600"
+        >
+          <img
+            class="w-full"
+            src="./images/gumdam-tokyo.JPG"
+            alt="Sunset in the mountains"
+          />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2 text-white">Gundam</div>
+            <p class="text-grey-darker text-base">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptatibus quia, nulla! Maiores et perferendis eaque,
+              exercitationem praesentium nihil.
+            </p>
+          </div>
+          <div class="px-6 py-4">
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#travel</span
+            >
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#spring</span
+            ><span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#japan</span
+            >
+          </div>
         </div>
       </div>
-      <div
-        class="max-w-xs rounded overflow-hidden shadow-lg my-2 col-span-6 md:col-span-2 mx-auto bg-teal-600"
-      >
-        <img
-          class="w-full"
-          src="./images/lilnap-shigi.JPG"
-          alt="Sunset in the mountains"
-        />
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">Little Nap On Mount Shigi</div>
-          <p class="text-grey-darker text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
-          </p>
+
+      <!--KYOTO TAB-->
+      <div x-show="tab ==='kyo'" class="grid grid-cols-6 gap-0">
+        <div
+          class="max-w-xs rounded-xl overflow-hidden shadow-lg my-2 col-span-6 md:col-span-2 mx-auto bg-teal-600"
+        >
+          <img
+            class="w-full"
+            src="./images/kyoto-river-boat.JPG"
+            alt="Sunset in the mountain"
+          />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2 text-white">Kyoto's Beauty</div>
+            <p class="text-grey-darker text-base">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptatibus quia, nulla! Maiores et perferendis eaque,
+              exercitationem praesentium nihil.
+            </p>
+          </div>
+          <div class="px-6 py-4">
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#travel</span
+            >
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#spring</span
+            ><span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#japan</span
+            >
+          </div>
         </div>
-        <div class="px-6 py-4">
-          <span
-            class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2"
-            >#photography</span
-          >
-          <span
-            class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2"
-            >#travel</span
-          >
-          <span
-            class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker"
-            >#spring</span
-          ><span
-            class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker"
-            >#japan</span
-          >
+        <div
+          class="max-w-xs rounded-xl overflow-hidden shadow-lg my-2 col-span-6 md:col-span-2 mx-auto bg-teal-600"
+        >
+          <img
+            class="w-full"
+            src="./images/kyoto-tori.JPG"
+            alt="Sunset in the mountain"
+          />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2 text-white">
+              Thousands of Tori
+            </div>
+            <p class="text-grey-darker text-base">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptatibus quia, nulla! Maiores et perferendis eaque,
+              exercitationem praesentium nihil.
+            </p>
+          </div>
+          <div class="px-6 py-4">
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#travel</span
+            >
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#spring</span
+            ><span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#japan</span
+            >
+          </div>
+        </div>
+        <div
+          class="max-w-xs rounded-xl overflow-hidden shadow-lg my-2 col-span-6 md:col-span-2 mx-auto bg-teal-600"
+        >
+          <img
+            class="w-full"
+            src="./images/kyoto-canals.JPG"
+            alt="Sunset in the mountain"
+          />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2 text-white">Cherry Blossoms</div>
+            <p class="text-grey-darker text-base">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptatibus quia, nulla! Maiores et perferendis eaque,
+              exercitationem praesentium nihil.
+            </p>
+          </div>
+          <div class="px-6 py-4">
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#travel</span
+            >
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#spring</span
+            ><span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#japan</span
+            >
+          </div>
+        </div>
+      </div>
+      <!--SHIGI TAB-->
+      <div x-show="tab === 'shi'" class="grid grid-cols-6 gap-0">
+        <div
+          class="max-w-xs rounded-xl overflow-hidden shadow-lg my-2 col-span-6 md:col-span-2 mx-auto bg-teal-600"
+        >
+          <img
+            class="w-full"
+            src="./images/lilnap-shigi.JPG"
+            alt="Sunset in the mountains"
+          />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2 text-white">
+              Little Nap On Mount Shigi
+            </div>
+            <p class="text-grey-darker text-base">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptatibus quia, nulla! Maiores et perferendis eaque,
+              exercitationem praesentium nihil.
+            </p>
+          </div>
+          <div class="px-6 py-4">
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#travel</span
+            >
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#spring</span
+            ><span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#japan</span
+            >
+          </div>
+        </div>
+        <div
+          class="max-w-xs rounded-xl overflow-hidden shadow-lg my-2 col-span-6 md:col-span-2 mx-auto bg-teal-600"
+        >
+          <img
+            class="w-full"
+            src="./images/oltemple-shigi.JPG"
+            alt="Sunset in the mountains"
+          />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2 text-white">Old Temples</div>
+            <p class="text-grey-darker text-base">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptatibus quia, nulla! Maiores et perferendis eaque,
+              exercitationem praesentium nihil.
+            </p>
+          </div>
+          <div class="px-6 py-4">
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#travel</span
+            >
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#spring</span
+            ><span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#japan</span
+            >
+          </div>
+        </div>
+        <div
+          class="max-w-xs rounded-xl overflow-hidden shadow-lg my-2 col-span-6 md:col-span-2 mx-auto bg-teal-600"
+        >
+          <img
+            class="w-full"
+            src="./images/cherry-blossom-shigi.JPG"
+            alt="Sunset in the mountains"
+          />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2 text-white">Awesome view</div>
+            <p class="text-grey-darker text-base">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptatibus quia, nulla! Maiores et perferendis eaque,
+              exercitationem praesentium nihil.
+            </p>
+          </div>
+          <div class="px-6 py-4">
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#travel</span
+            >
+            <span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#spring</span
+            ><span
+              class="inline-block px-3 py-1 text-sm font-semibold text-white"
+              >#japan</span
+            >
+          </div>
         </div>
       </div>
     </section>
-    <!--test dropdown-->
-    <div x-data="{ open: false }">
-      <button @click="open = true" class="btn-teal">Ouvrir le menu</button>
-
-      <ul
-        x-show="open"
-        @click.away="open = false"
-        class="text-black font-bold pr-4"
-      >
-        <li><a class="hover:text-gray-500" href="#">=> HOME</a></li>
-        <li><a class="hover:text-gray-500" href="#">=> PROJECTS</a></li>
-        <li><a class="hover:text-gray-500" href="#">=> CONTACT</a></li>
-      </ul>
-    </div>
-    <!--test onglets-->
-    <div x-data="{ tab: 'foo' }">
-      <button
-        :class="{ 'active': tab === 'foo' }"
-        class="btn-teal mt-2"
-        @click="tab = 'foo'"
-      >
-        View
-      </button>
-      <button
-        :class="{ 'active': tab === 'bar' }"
-        class="btn-teal mt-2"
-        @click="tab = 'bar'"
-      >
-        Nap
-      </button>
-
-      <div
-        x-show="tab === 'foo'"
-        class="max-w-xs rounded overflow-hidden shadow-lg my-2 col-span-6 md:col-span-2 mx-auto bg-teal-600"
-      >
-        <img
-          class="w-full"
-          src="./images/umeda-view-osaka.JPG"
-          alt="Sunset in the mountains"
-        />
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">
-            Inside The Umeda Sky Building
-          </div>
-          <p class="text-grey-darker text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
-          </p>
-        </div>
-        <div class="px-6 py-4">
-          <span
-            class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2"
-            >#photography</span
-          >
-          <span
-            class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2"
-            >#travel</span
-          >
-          <span
-            class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker"
-            >#spring</span
-          ><span
-            class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker"
-            >#japan</span
-          >
-        </div>
-      </div>
-      <div
-        x-show="tab === 'bar'"
-        class="max-w-xs rounded overflow-hidden shadow-lg my-2 col-span-6 md:col-span-2 mx-auto bg-teal-600"
-      >
-        <img
-          class="w-full"
-          src="./images/lilnap-shigi.JPG"
-          alt="Sunset in the mountains"
-        />
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">Little Nap On Mount Shigi</div>
-          <p class="text-grey-darker text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
-          </p>
-        </div>
-        <div class="px-6 py-4">
-          <span
-            class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2"
-            >#photography</span
-          >
-          <span
-            class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2"
-            >#travel</span
-          >
-          <span
-            class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker"
-            >#spring</span
-          ><span
-            class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker"
-            >#japan</span
-          >
-        </div>
-      </div>
-    </div>
     <!--FOOTER-->
     <footer class="grid grid-cols-4 gap-0 h-20 bg-teal-600 mt-4"></footer>
   </body>
